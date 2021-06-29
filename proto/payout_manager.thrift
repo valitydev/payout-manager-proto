@@ -13,6 +13,7 @@ struct Event {
     2: required SequenceID sequence_id
     3: required base.Timestamp created_at
     4: required PayoutChange payout_change
+    5: required Payout payout
 }
 
 union PayoutChange {
