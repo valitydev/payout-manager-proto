@@ -5,14 +5,11 @@ namespace java com.rbkmoney.payout.manager
 namespace erlang payouts
 
 typedef base.ID PayoutID
-typedef base.SequenceID SequenceID
-typedef base.Timestamp Timestamp
-typedef base.InvalidRequest InvalidRequest
 
 struct Event {
     1: required PayoutID payout_id
-    2: required SequenceID sequence_id
-    3: required Timestamp created_at
+    2: required base.SequenceID sequence_id
+    3: required base.Timestamp created_at
     4: required PayoutChange payout_change
     5: required Payout payout
 }
@@ -28,7 +25,7 @@ struct PayoutCreated {
 
 struct Payout {
     1: required PayoutID payout_id
-    2: required Timestamp created_at
+    2: required base.Timestamp created_at
     3: required domain.PartyID party_id
     4: required domain.ShopID shop_id
     5: required PayoutStatus status
@@ -120,7 +117,7 @@ service PayoutManagement {
      */
     Payout CreatePayout (1: PayoutParams payout_params) throws (
         1: InsufficientFunds ex1,
-        2: InvalidRequest ex2,
+        2: base.InvalidRequest ex2,
         3: PayoutAlreadyExists ex3,
         4: NotFound ex4)
 
