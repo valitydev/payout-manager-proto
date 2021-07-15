@@ -1,5 +1,5 @@
 namespace java com.rbkmoney.payout.manager.base
-namespace erlang payout_manager_base
+namespace erlang payouts_base
 
 /** Идентификатор */
 typedef string ID

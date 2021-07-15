@@ -2,7 +2,7 @@ include "base.thrift"
 include "domain.thrift"
 
 namespace java com.rbkmoney.payout.manager
-namespace erlang payout_manager
+namespace erlang payouts
 
 typedef base.ID PayoutID
 typedef base.SequenceID SequenceID
