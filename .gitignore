@@ -9,6 +9,9 @@ ebin/*.beam
 rel/example_project
 .concrete/DEV_MODE
 .rebar
+include/*.hrl
+src/*.erl
+_build/
 target/
 pom.xml.tag
 pom.xml.releaseBackup
