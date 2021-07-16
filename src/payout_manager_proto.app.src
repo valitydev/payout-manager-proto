@@ -1,0 +1,11 @@
+{application, payout_manager_proto, [
+    {description, "Thrift proto for payout-manager"},
+    {vsn, "0.1.0"},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {maintainers, [
+        "RBK Money https://rbk.money"
+    ]}
+]}.

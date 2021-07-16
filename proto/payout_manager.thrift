@@ -1,16 +1,14 @@
 include "base.thrift"
 include "domain.thrift"
-include "msgpack.thrift"
 
 namespace java com.rbkmoney.payout.manager
-namespace erlang payout_manager
+namespace erlang payouts
 
 typedef base.ID PayoutID
-typedef base.SequenceID SequenceID
 
 struct Event {
     1: required PayoutID payout_id
-    2: required SequenceID sequence_id
+    2: required base.SequenceID sequence_id
     3: required base.Timestamp created_at
     4: required PayoutChange payout_change
     5: required Payout payout
