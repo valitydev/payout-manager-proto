@@ -1,7 +1,7 @@
 include "proto/base.thrift"
 include "proto/domain.thrift"
 
-namespace java com.rbkmoney.payout.manager
+namespace java dev.vality.payout.manager
 namespace erlang payouts
 
 typedef base.ID PayoutID
