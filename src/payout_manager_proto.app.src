@@ -4,8 +4,5 @@
     {applications, [
         kernel,
         stdlib
-    ]},
-    {maintainers, [
-        "RBK Money https://rbk.money"
     ]}
 ]}.
