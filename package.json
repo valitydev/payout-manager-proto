@@ -1,0 +1,10 @@
+{
+  "name": "@vality/payout-manager-proto",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valitydev/payout-manager-proto.git"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/valitydev/payout-manager-proto#readme"
+}
