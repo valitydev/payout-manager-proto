@@ -1,10 +1,26 @@
 {
   "name": "@vality/payout-manager-proto",
   "version": "1.0.0",
+  "scripts": {
+    "codegen": "thrift-codegen"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valitydev/payout-manager-proto.git"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/valitydev/payout-manager-proto#readme"
+  "homepage": "https://github.com/valitydev/payout-manager-proto#readme",
+  "files": [
+    "lib/**/*.{js,d.ts,json}"
+  ],
+  "main": "./lib/payout_manager.js",
+  "types": "./lib/payout_manager.d.ts",
+  "devDependencies": {
+    "@vality/thrift-codegen": "^0.1.1-e636464.0",
+    "damsel": "github:valitydev/damsel#5addc419f26de2cd00294865feea3d997d308d77"
+  }
 }

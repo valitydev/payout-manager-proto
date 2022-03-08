@@ -10,3 +10,7 @@ rebar3.crashdump
 include/*.hrl
 src/*.erl
 *.iml
+
+# frontend
+node_modules
+lib
