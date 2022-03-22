@@ -21,6 +21,6 @@
   "types": "./lib/payout_manager.d.ts",
   "devDependencies": {
     "@vality/thrift-codegen": "^0.1.1-e636464.0",
-    "damsel": "github:valitydev/damsel#5addc419f26de2cd00294865feea3d997d308d77"
+    "damsel": "github:valitydev/damsel#318a7a6588c4813bd7d5c170af58fa9b6a80e401"
   }
 }
