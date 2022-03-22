@@ -60,7 +60,7 @@
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.544-dcd92dd</version>
+            <version>1.556-6d2bc92</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
