@@ -34,8 +34,6 @@ struct Payout {
     8: required domain.Amount amount
     9: required domain.Amount fee
     10: required domain.CurrencyRef currency
-    11: optional PayoutToolInfo payout_tool_info
-    12: optional base.ID wallet_id
 }
 
 struct PayoutStatusChanged {
@@ -81,13 +79,6 @@ struct PayoutCancelled {
  * то есть если выплата confirmed, то балансы уже изменены
  */
 struct PayoutConfirmed {}
-
-enum PayoutToolInfo {
-    russian_bank_account
-    international_bank_account
-    wallet_info
-    payment_institution_account
-}
 
 exception NotFound {
     1: optional string message
