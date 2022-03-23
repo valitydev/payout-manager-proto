@@ -54,7 +54,6 @@ struct PayoutStatusChanged {
  */
 union PayoutStatus {
     1: PayoutUnpaid unpaid
-    2: PayoutPaid paid
     3: PayoutCancelled cancelled
     4: PayoutConfirmed confirmed
 }
