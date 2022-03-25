@@ -15,12 +15,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/valitydev/payout-manager-proto#readme",
   "files": [
-    "lib/**/*.{js,d.ts,json}"
+    "lib/**/*.{js,d.ts,json}",
+    "**/*.thrift"
   ],
   "main": "./lib/payout_manager.js",
   "types": "./lib/payout_manager.d.ts",
   "devDependencies": {
-    "@vality/thrift-codegen": "^0.1.1-e636464.0",
+    "@vality/thrift-codegen": "0.1.1-c81b4b7.0",
     "damsel": "github:valitydev/damsel#318a7a6588c4813bd7d5c170af58fa9b6a80e401"
   }
 }
