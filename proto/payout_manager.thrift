@@ -51,6 +51,7 @@ union PayoutStatus {
     1: PayoutUnpaid unpaid
     3: PayoutCancelled cancelled
     4: PayoutConfirmed confirmed
+    5: PayoutFailed failed
 }
 
 /* Создается в статусе unpaid */
@@ -70,6 +71,8 @@ struct PayoutCancelled {
  * то есть если выплата confirmed, то балансы уже изменены
  */
 struct PayoutConfirmed {}
+
+struct PayoutFailed {}
 
 exception NotFound {
     1: optional string message
