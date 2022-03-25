@@ -72,6 +72,10 @@ struct PayoutCancelled {
  */
 struct PayoutConfirmed {}
 
+/**
+ * Помечается статусом failed, когда возникли внутренние ошибки,
+ * в следствии которых продолжение формирования выплаты невозможно
+ */
 struct PayoutFailed {}
 
 exception NotFound {
