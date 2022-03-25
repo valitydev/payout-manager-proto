@@ -42,7 +42,8 @@ struct PayoutStatusChanged {
 
 /**
  * Выплата создается в статусе "unpaid", затем выплата может перейти либо в "confirmed", если есть подтверждение
- * оплаты, либо в "cancelled", если была получена информация о неуспешном переводе.
+ * оплаты, либо в "cancelled", если была получена информация о неуспешном переводе, либо failed, если была попытка
+ * перевести выплату в статус confirmed, но произошла внутренняя ошибка (необходимо попытаться заново провести выплату)
  *
  * Может случиться так, что уже подтвержденную выплату нужно отменять, и тогда выплата
  * может перейти из статуса "confirmed" в "cancelled".
@@ -51,6 +52,7 @@ union PayoutStatus {
     1: PayoutUnpaid unpaid
     3: PayoutCancelled cancelled
     4: PayoutConfirmed confirmed
+    5: PayoutFailed failed
 }
 
 /* Создается в статусе unpaid */
@@ -70,6 +72,12 @@ struct PayoutCancelled {
  * то есть если выплата confirmed, то балансы уже изменены
  */
 struct PayoutConfirmed {}
+
+/**
+ * Помечается статусом failed, когда возникли внутренние ошибки,
+ * вследствие которых продолжение формирования выплаты невозможно
+ */
+struct PayoutFailed {}
 
 exception NotFound {
     1: optional string message
