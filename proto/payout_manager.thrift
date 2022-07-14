@@ -2,7 +2,7 @@ include "proto/base.thrift"
 include "proto/domain.thrift"
 
 namespace java dev.vality.payout.manager
-namespace erlang payouts
+namespace erlang pmproto.payouts
 
 typedef base.ID PayoutID
 
